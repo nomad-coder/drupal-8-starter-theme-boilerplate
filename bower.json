@@ -1,0 +1,43 @@
+{
+  "name": "Drupal 8 Starter Theme",
+  "description": "Drupal 8 Starter Theme",
+  "main": "bower.json",
+  "authors": [
+    "Turbat Bayartogtokh"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
+    "font-awesome": "~4.4.0",
+    "jQuery.mmenu": "^5.7.0",
+    "matchHeight": "^0.7.0"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/javascripts/bootstrap.min.js",
+        "assets/javascripts/bootstrap/collapse.js"
+      ]
+    },
+    "font-awesome": {
+      "main": "css/font-awesome.min.css"
+    },
+    "jQuery.mmenu": {
+      "main": [
+        "dist/js/jquery.mmenu.min.js",
+        "dist/css/jquery.mmenu.all.css",
+        "dist/extensions/positioning/jquery.mmenu.positioning.css"
+      ]
+    }
+  }
+}

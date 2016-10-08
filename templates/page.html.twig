@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single Drupal page.
+ */
+ #}
+
+{#
+  {{ dump(foo) }}
+  {{ dump(_context | keys) }} - contains all variables that are passed to the template file
+  {{ dump(_charset) }} - references the current charset
+  {{ kint(_context) }} - devel kint version of dump
+
+  {{ attach_library('theme/library') }} - add library directly to template file
+
+#}
+
+<div id="wrapper">
+
+  {% include directory ~ '/templates/_header.html.twig' %}
+
+  <div class="container">
+
+      <div class="content contain">
+        <main class="page-content" role="main">
+          <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+          {{ messages }}
+          {% if page.help %}
+            <div class="help">
+              {{ page.help }}
+            </div>
+          {% endif %}
+          {% if action_links %}
+            <ul class="action-links">
+              {{ action_links }}
+            </ul>
+          {% endif %}
+
+          {{ title_prefix }}
+          {% if title %}
+            <h1 class="page-title">{{ title }}</h1>
+          {% endif %}
+          {{ title_suffix }}
+
+          {{ page.content }}
+
+      </main>
+    </div>
+
+  </div>
+
+  {% include directory ~ '/templates/_footer.html.twig' %}
+
+</div><!-- wrapper -->
+

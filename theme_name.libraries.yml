@@ -1,0 +1,15 @@
+global-css:
+  version: VERSION
+  css:
+    theme:
+      dist/libraries/font-awesome.min.css: {}
+      dist/css/styles.css: {}
+global-js:
+  version: VERSION
+  js:
+    dist/libraries/bootstrap.min.js: {}
+    dist/js/main.js: {}
+  dependencies:
+    - core/jquery
+
+

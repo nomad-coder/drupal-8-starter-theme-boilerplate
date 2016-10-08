@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Seven theme.
+ */
+
+use Drupal\Component\Utility\Xss;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function THEME_NAME_preprocess_page(&$variables) {
+    // Load this library only on front page.
+    if ($variables['is_front']) {
+        $variables['#attached']['library'][] = 'THEME_NAME/front-page';
+    }
+}
+
+
+function THEME_NAME_theme_suggestions_page_alter(array &$suggestions, array $vars) {
+    $node = \Drupal::request()->attributes->get('node');
+    if (isset($node)) {
+        $nodeType = $node->getType();
+        $suggestions[] = 'page__type__' . $nodeType;
+        $pageTitle = strtolower($node->getTitle());
+        $suggestions[] = 'page__' . str_replace(' ', '_', $pageTitle);
+    }
+}

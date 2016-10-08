@@ -1,0 +1,28 @@
+{
+  "name": "drupal_8_theme",
+  "version": "1.0.0",
+  "description": "Drupal 8 Theme",
+  "author": "Turbat Bayartogtokh",
+  "devDependencies": {
+    "browser-sync": "^2.7.5",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-beautify": "^1.1.2",
+    "gulp-bower": "0.0.10",
+    "gulp-clean": "^0.3.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.11.0",
+    "gulp-load-plugins": "^1.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-shell": "^0.4.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "jshint-stylish": "^2.0.0",
+    "main-bower-files": "^2.9.0",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-ruby-sass": "^2.0.5"
+  }
+}

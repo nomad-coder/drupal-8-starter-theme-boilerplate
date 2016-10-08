@@ -1,0 +1,21 @@
+name: theme_name
+description: 'Drupal 8 theme'
+type: theme
+version: 1.0
+core: 8.x
+base theme: classy
+screenshot: screenshot.png
+libraries:
+  - theme_name/global-css
+  - theme_name/global-js
+
+stylesheets-remove:
+  - core/assets/vendor/normalize-css/normalize.css
+  - core/modules/system/css/system.module.css
+  - core/modules/system/css/system.theme.css
+  - core/modules/views/css/views.module.css
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer
